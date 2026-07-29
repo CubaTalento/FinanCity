@@ -1,23 +1,32 @@
-// FinanCity - Sistema económico básico
+// FinanCity - Sistema económico y jugador
+
+const jugador = {
+    nombre: "Emprendedor",
+    nivel: 1,
+    experiencia: 0,
+    dinero: 1000
+};
+
 
 const economia = {
-    dinero: 1000,
-    ingresos: 0,
-    gastos: 0,
 
     agregarIngreso(cantidad) {
-        this.ingresos += cantidad;
-        this.dinero += cantidad;
+        jugador.dinero += cantidad;
     },
 
     agregarGasto(cantidad) {
-        this.gastos += cantidad;
-        this.dinero -= cantidad;
+        jugador.dinero -= cantidad;
     },
 
     obtenerBalance() {
-        return this.dinero;
+        return jugador.dinero;
+    },
+
+    obtenerJugador() {
+        return jugador;
     }
+
 };
 
-console.log("Sistema económico cargado");
+
+console.log("Sistema de jugador y economía cargado");
