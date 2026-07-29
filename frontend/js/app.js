@@ -1,3 +1,9 @@
-// Lógica principal de FinanCity
+// FinanCity - Lógica principal
 
-console.log("FinanCity iniciado");
+const pantallaDinero = document.getElementById("dinero");
+
+if (pantallaDinero) {
+    pantallaDinero.textContent = "$" + economia.obtenerBalance();
+}
+
+console.log("FinanCity iniciado correctamente");
