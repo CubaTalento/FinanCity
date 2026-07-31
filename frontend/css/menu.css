@@ -1,264 +1,364 @@
-/* ==========================================
-   FINANCITY - MENÚ PRINCIPAL
-   Versión 1.1
-========================================== */
+/* ===================================================
+   FINANCITY
+   MENÚ PRINCIPAL - VERSIÓN AAA 1.0
+=================================================== */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html,
 body{
 
-    width:100%;
-    height:100%;
-    font-family:Arial,Helvetica,sans-serif;
-    overflow:hidden;
+width:100%;
+height:100%;
+overflow:hidden;
+
+font-family:Arial,Helvetica,sans-serif;
+
+background:#000;
 
 }
-
-body{
-
-    background:#081a35;
-
-}
-
-/* ===========================
-   PANTALLA DE INICIO
-=========================== */
 
 #inicio{
 
-    position:relative;
+position:relative;
 
-    width:100vw;
-    height:100vh;
+width:100vw;
+height:100vh;
 
-    background-image:url("../../assets/Fondo.png");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+overflow:hidden;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+display:flex;
+flex-direction:column;
 
 }
 
-/* Oscurece ligeramente el fondo */
+/* ==========================
+   FONDO
+========================== */
 
-#inicio::before{
+.fondo{
 
-    content:"";
+position:absolute;
 
-    position:absolute;
-    inset:0;
+left:0;
+top:0;
 
-    background:linear-gradient(
-        rgba(5,15,35,.35),
-        rgba(5,15,35,.75)
-    );
+width:100%;
+height:100%;
 
-}
+background-image:url("../../assets/Fondo.png");
+background-size:cover;
+background-position:center;
 
-/* ===========================
-   CONTENIDO
-=========================== */
+transform:scale(1.05);
 
-.contenido{
-
-    position:relative;
-    z-index:10;
-
-    width:90%;
-    max-width:420px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
+z-index:1;
 
 }
 
-/* ===========================
-   LOGO
-=========================== */
+.oscuro{
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(
+rgba(0,0,0,.18),
+rgba(0,0,0,.55)
+);
+
+z-index:2;
+
+}
+
+/* ==========================
+   ENCABEZADO
+========================== */
+
+.encabezado{
+
+position:relative;
+
+z-index:10;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px;
+
+}
 
 .logo{
 
-    width:280px;
-    max-width:90%;
+width:240px;
 
-    margin-bottom:18px;
-
-}
-
-/* ===========================
-   SUBTÍTULO
-=========================== */
-
-.subtitulo{
-
-    color:#ffffff;
-
-    font-size:20px;
-    font-weight:bold;
-
-    text-shadow:0 2px 8px #000;
-
-    margin-bottom:20px;
+filter:drop-shadow(0 0 18px rgba(255,255,255,.25));
 
 }
 
-/* ===========================
+.icono{
+
+width:52px;
+height:52px;
+
+border:none;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(10px);
+
+font-size:22px;
+
+color:white;
+
+}
+
+/* ==========================
+   CUERPO
+========================== */
+
+.principal{
+
+position:relative;
+
+z-index:10;
+
+flex:1;
+
+display:flex;
+align-items:center;
+justify-content:space-evenly;
+
+padding:15px;
+
+}
+
+.ladoIzquierdo{
+
+width:45%;
+
+display:flex;
+justify-content:center;
+
+}
+
+.ladoDerecho{
+
+width:50%;
+
+}
+
+/* ==========================
    SOFIA
-=========================== */
+========================== */
 
 .sofia{
 
-    width:220px;
-    max-width:80%;
+width:100%;
+max-width:280px;
 
-    margin-bottom:20px;
+animation:flotar 4s ease-in-out infinite;
 
-    animation:flotar 4s ease-in-out infinite;
+filter:drop-shadow(0 10px 25px rgba(0,0,0,.55));
 
 }
 
-/* ===========================
-   DIÁLOGO
-=========================== */
+/* ==========================
+   DIALOGO
+========================== */
 
 .dialogo{
 
-    width:100%;
+background:white;
 
-    background:rgba(8,25,60,.90);
+border-radius:22px;
 
-    border:2px solid #25d366;
+padding:20px;
 
-    border-radius:18px;
+margin-bottom:18px;
 
-    padding:18px;
-
-    color:white;
-
-    line-height:1.6;
-
-    margin-bottom:25px;
-
-    box-shadow:0 0 20px rgba(0,0,0,.35);
+box-shadow:0 15px 40px rgba(0,0,0,.40);
 
 }
 
-/* ===========================
+.dialogo h2{
+
+color:#0b4ca4;
+
+margin-bottom:10px;
+
+}
+
+.dialogo p{
+
+font-size:16px;
+
+line-height:1.6;
+
+color:#333;
+
+}
+
+/* ==========================
    BOTONES
-=========================== */
+========================== */
 
 .boton{
 
-    width:100%;
+width:100%;
 
-    padding:18px;
+padding:18px;
 
-    margin-bottom:15px;
+border:none;
 
-    border:none;
+border-radius:16px;
 
-    border-radius:18px;
+font-size:18px;
 
-    color:white;
+font-weight:bold;
 
-    font-size:20px;
-    font-weight:bold;
+color:white;
 
-    cursor:pointer;
-
-    transition:.25s;
+margin-bottom:14px;
 
 }
 
 .verde{
 
-    background:#18b458;
+background:#1db954;
 
 }
 
 .azul{
 
-    background:#2b73ff;
+background:#2d73ff;
 
 }
 
 .morado{
 
-    background:#7b45ff;
+background:#7d47ff;
 
 }
 
-.boton:hover{
+/* ==========================
+   BARRA INFERIOR
+========================== */
 
-    transform:scale(1.03);
+.barraInferior{
 
-}
+position:relative;
 
-.boton:active{
+z-index:10;
 
-    transform:scale(.97);
+height:75px;
 
-}
+background:rgba(5,18,45,.92);
 
-/* ===========================
-   PIE
-=========================== */
+display:flex;
+justify-content:space-around;
+align-items:center;
 
-footer{
+backdrop-filter:blur(10px);
 
-    position:absolute;
-
-    left:0;
-    bottom:18px;
-
-    width:100%;
-
-    text-align:center;
-
-    color:white;
-
-    font-size:13px;
-
-    text-shadow:0 2px 5px black;
-
-    z-index:20;
+color:white;
 
 }
 
-/* ===========================
+.barraInferior div{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+font-size:24px;
+
+}
+
+.barraInferior span{
+
+font-size:11px;
+
+margin-top:3px;
+
+}
+
+/* ==========================
    ANIMACIONES
-=========================== */
+========================== */
 
 @keyframes flotar{
 
-    0%{
+0%{
 
-        transform:translateY(0px);
+transform:translateY(0px);
 
-    }
+}
 
-    50%{
+50%{
 
-        transform:translateY(-10px);
+transform:translateY(-12px);
 
-    }
+}
 
-    100%{
+100%{
 
-        transform:translateY(0px);
+transform:translateY(0px);
 
-    }
+}
+
+}
+
+/* ==========================
+   MÓVILES
+========================== */
+
+@media(max-width:700px){
+
+.principal{
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+.ladoIzquierdo,
+.ladoDerecho{
+
+width:100%;
+
+}
+
+.logo{
+
+width:200px;
+
+margin:auto;
+
+}
+
+.sofia{
+
+max-width:220px;
+
+margin-bottom:15px;
+
+}
+
+.dialogo{
+
+font-size:15px;
+
+}
 
 }
