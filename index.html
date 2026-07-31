@@ -6,159 +6,237 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <title>FinanCity</title>
 
-<link rel="stylesheet"
-href="frontend/css/menu.css">
+<meta name="theme-color" content="#0b1433">
+
+<link rel="icon" href="assets/Icono.png">
+
+<link rel="stylesheet" href="frontend/css/menu.css">
 
 </head>
 
 <body>
 
-<section id="inicio">
+<div id="menuPrincipal">
 
-<div class="fondo"></div>
+    <!-- Fondo -->
 
-<div class="oscuro"></div>
+    <div class="fondo"></div>
 
-<header class="encabezado">
+    <div class="overlay"></div>
 
-<button class="icono" id="sonido">
+    <!-- Barra superior -->
 
-🔊
+    <header class="topbar">
 
-</button>
+        <button
+        id="btnSonido"
+        class="botonIcono"
+        aria-label="Sonido">
 
-<img
-src="assets/Logo.png"
-alt="FinanCity"
-class="logo">
+            🔊
 
-<button class="icono" id="idioma">
+            <span>SONIDO</span>
 
-🌎
+        </button>
 
-</button>
+        <img
+        src="assets/Logo.png"
+        alt="FinanCity"
+        class="logo">
 
-</header>
+        <button
+        id="btnIdioma"
+        class="botonIcono"
+        aria-label="Idioma">
 
-<main class="principal">
+            🌍
 
-<div class="ladoIzquierdo">
+            <span>IDIOMA</span>
 
-<img
-src="assets/SofIA.png"
-alt="SofIA"
-class="sofia">
+        </button>
+
+    </header>
+
+    <!-- Centro -->
+
+    <main class="contenido">
+
+        <!-- SofIA -->
+
+        <section class="zonaSofia">
+
+            <img
+            src="assets/SofIA.png"
+            alt="SofIA"
+            class="sofia">
+
+        </section>
+
+        <!-- Globo -->
+
+        <section class="zonaDialogo">
+
+            <div class="dialogo">
+
+                <h2>
+
+                    ¡Hola, futuro magnate!
+
+                </h2>
+
+                <p>
+
+                    Cada decisión que tomes hoy
+                    construirá la ciudad de tus sueños.
+
+                </p>
+
+                <p class="pregunta">
+
+                    ¿Estás listo para empezar?
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Botones -->
+
+        <section class="menuBotones">
+
+            <button
+            class="botonMenu verde"
+            onclick="location.href='intro.html'">
+
+                <span class="iconoBoton">▶</span>
+
+                <span>
+
+                    <strong>NUEVA PARTIDA</strong>
+
+                    <small>
+                    Comienza tu aventura desde cero
+                    </small>
+
+                </span>
+
+            </button>
+
+            <button
+            class="botonMenu azul">
+
+                <span class="iconoBoton">📂</span>
+
+                <span>
+
+                    <strong>CONTINUAR</strong>
+
+                    <small>
+                    Retoma tu ciudad
+                    </small>
+
+                </span>
+
+            </button>
+
+            <button
+            class="botonMenu morado">
+
+                <span class="iconoBoton">⚙</span>
+
+                <span>
+
+                    <strong>AJUSTES</strong>
+
+                    <small>
+                    Personaliza tu experiencia
+                    </small>
+
+                </span>
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- Barra inferior -->
+
+    <footer class="barraInferior">
+
+        <div class="itemBarra">
+
+            📈
+
+            <span>APRENDE</span>
+
+        </div>
+
+        <div class="itemBarra">
+
+            💼
+
+            <span>EMPRENDE</span>
+
+        </div>
+
+        <div class="itemBarra">
+
+            📊
+
+            <span>INVIERTE</span>
+
+        </div>
+
+        <div class="itemBarra">
+
+            👥
+
+            <span>COMPITE</span>
+
+        </div>
+
+        <div class="itemBarra">
+
+            🏆
+
+            <span>PROGRESA</span>
+
+        </div>
+
+    </footer>
+
+    <!-- Pie -->
+
+    <div class="creditos">
+
+        <span>
+
+            Versión 0.2.0
+
+        </span>
+
+        <span>
+
+            © 2026 FinanCity
+
+        </span>
+
+        <button id="privacidad">
+
+            PRIVACIDAD
+
+        </button>
+
+    </div>
 
 </div>
-
-<div class="ladoDerecho">
-
-<div class="dialogo">
-
-<h2>
-
-👩 SofIA
-
-</h2>
-
-<p>
-
-Bienvenido a <strong>FinanCity</strong>.
-
-<br><br>
-
-Construye empresas.
-
-Administra tus finanzas.
-
-Invierte.
-
-Haz crecer tu ciudad.
-
-<br><br>
-
-Hoy comienza tu historia.
-
-</p>
-
-</div>
-
-<button
-class="boton verde"
-onclick="location.href='intro.html'">
-
-▶ NUEVA PARTIDA
-
-</button>
-
-<button
-class="boton azul">
-
-📂 CONTINUAR
-
-</button>
-
-<button
-class="boton morado">
-
-⚙ AJUSTES
-
-</button>
-
-</div>
-
-</main>
-
-<footer class="barraInferior">
-
-<div>
-
-🏙️
-
-<span>Ciudad</span>
-
-</div>
-
-<div>
-
-💼
-
-<span>Negocios</span>
-
-</div>
-
-<div>
-
-📈
-
-<span>Finanzas</span>
-
-</div>
-
-<div>
-
-🎒
-
-<span>Inventario</span>
-
-</div>
-
-<div>
-
-⚙️
-
-<span>Ajustes</span>
-
-</div>
-
-</footer>
-
-</section>
 
 </body>
 
-</html>
+  </html>
