@@ -8,216 +8,7 @@
 
 <title>FinanCity - Ciudad</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-
-background:url("assets/Fondo.png") center center;
-background-size:cover;
-height:100vh;
-overflow:hidden;
-
-}
-
-body::before{
-
-content:"";
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.35);
-
-}
-
-/* Barra superior */
-
-.topbar{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:65px;
-
-display:flex;
-justify-content:space-around;
-align-items:center;
-
-background:rgba(5,20,60,.92);
-
-color:white;
-
-font-weight:bold;
-
-z-index:100;
-
-}
-
-/* Ciudad */
-
-.ciudad{
-
-position:absolute;
-
-top:80px;
-bottom:90px;
-
-left:0;
-right:0;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-}
-
-.tarjeta{
-
-background:rgba(255,255,255,.95);
-
-padding:20px;
-
-border-radius:20px;
-
-width:92%;
-max-width:420px;
-
-text-align:center;
-
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-
-}
-
-.tarjeta h2{
-
-color:#0b4ea2;
-margin-bottom:15px;
-
-}
-
-.negocio{
-
-margin-top:20px;
-
-padding:18px;
-
-background:#F5F5F5;
-
-border-radius:15px;
-
-}
-
-button{
-
-margin-top:15px;
-
-width:100%;
-
-padding:16px;
-
-border:none;
-
-border-radius:15px;
-
-background:#1DB954;
-
-color:white;
-
-font-size:18px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-}
-
-/* SofIA */
-
-.sofia{
-
-position:fixed;
-
-right:10px;
-
-bottom:95px;
-
-width:120px;
-
-animation:flotar 3s infinite ease-in-out;
-
-z-index:50;
-
-}
-
-@keyframes flotar{
-
-0%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0);}
-
-}
-
-/* Misión */
-
-.mision{
-
-position:fixed;
-
-left:10px;
-
-bottom:95px;
-
-width:220px;
-
-background:white;
-
-padding:15px;
-
-border-radius:15px;
-
-box-shadow:0 5px 20px rgba(0,0,0,.3);
-
-font-size:14px;
-
-z-index:50;
-
-}
-
-/* Barra inferior */
-
-.menu{
-
-position:fixed;
-
-bottom:0;
-
-left:0;
-
-width:100%;
-
-height:75px;
-
-background:rgba(5,20,60,.95);
-
-display:flex;
-
-justify-content:space-around;
-
-align-items:center;
-
-color:white;
-
-font-size:14px;
-
-}
-
-</style>
+<link rel="stylesheet" href="css/juego.css">
 
 </head>
 
@@ -225,53 +16,56 @@ font-size:14px;
 
 <div class="topbar">
 
-<div>💰 500 SOF</div>
+    <div id="dinero">💰 500 SOF</div>
 
-<div>⭐ Nivel 1</div>
+    <div id="nivel">⭐ Nivel 1</div>
 
-<div>❤️ 100</div>
+    <div id="energia">❤️ 100</div>
 
 </div>
 
 <div class="ciudad">
 
-<div class="tarjeta">
+    <div class="tarjeta">
 
-<h2>🌆 Ciudad Inicial</h2>
+        <h2>🌆 Ciudad Inicial</h2>
 
-<p>
+        <p id="mensajeSofia">
 
-Bienvenido a tu primera ciudad.
+            Bienvenido a tu primera ciudad.
 
-Empieza con un pequeño negocio y haz crecer tu imperio.
+            Empieza con un pequeño negocio y conviértete
+            en el mejor empresario de FinanCity.
 
-</p>
+        </p>
 
-<div class="negocio">
+        <div class="negocio">
 
-🏪 <b>Puesto de Limonada</b>
+            <h3>🏪 Puesto de Limonada</h3>
 
-<br><br>
+            <p>
 
-Costo: <b>100 SOF</b>
+                Costo: <b>100 SOF</b>
 
-<br>
+                <br>
 
-Ganancia estimada: <b>25 SOF</b>
+                Produce <b>25 SOF</b> cada pocos segundos.
 
-<button>
+            </p>
 
-Construir
+            <button id="btnConstruir">
 
-</button>
+                Construir
+
+            </button>
+
+        </div>
+
+    </div>
 
 </div>
 
-</div>
-
-</div>
-
-<div class="mision">
+<div class="mision" id="mision">
 
 <b>📋 Primera misión</b>
 
@@ -283,17 +77,20 @@ Construye tu primer puesto de limonada.
 
 🎁 Recompensa:
 
-+50 SOF
-
 <br>
 
 ⭐ +25 XP
+
+<br>
+
+💰 +50 SOF
 
 </div>
 
 <img
 src="assets/SofIA.png"
-class="sofia">
+class="sofia"
+alt="SofIA">
 
 <div class="menu">
 
@@ -308,6 +105,8 @@ class="sofia">
 <div>⚙️<br>Ajustes</div>
 
 </div>
+
+<script src="js/juego.js"></script>
 
 </body>
 
