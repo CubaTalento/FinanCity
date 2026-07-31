@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
@@ -7,110 +8,7 @@
 
 <title>FinanCity - Bienvenido</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-
-background:url("assets/Fondo.png") center center;
-background-size:cover;
-height:100vh;
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-
-}
-
-body::before{
-
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.45);
-
-}
-
-.contenedor{
-
-position:relative;
-z-index:2;
-width:92%;
-max-width:420px;
-
-}
-
-.sofia{
-
-width:220px;
-display:block;
-margin:auto;
-animation:flotar 3s ease-in-out infinite;
-
-}
-
-@keyframes flotar{
-
-0%{transform:translateY(0);}
-50%{transform:translateY(-12px);}
-100%{transform:translateY(0);}
-
-}
-
-.dialogo{
-
-margin-top:20px;
-background:white;
-border-radius:25px;
-padding:25px;
-box-shadow:0 10px 30px rgba(0,0,0,.35);
-
-}
-
-.nombre{
-
-color:#0A4EA3;
-font-size:26px;
-font-weight:bold;
-margin-bottom:15px;
-
-}
-
-.texto{
-
-font-size:18px;
-line-height:1.6;
-color:#333;
-
-}
-
-.boton{
-
-margin-top:25px;
-width:100%;
-padding:18px;
-border:none;
-border-radius:50px;
-font-size:22px;
-font-weight:bold;
-background:#FFD400;
-cursor:pointer;
-
-}
-
-.boton:hover{
-
-background:#ffca00;
-
-}
-
-</style>
+<link rel="stylesheet" href="frontend/css/estilos.css">
 
 </head>
 
@@ -118,33 +16,46 @@ background:#ffca00;
 
 <div class="contenedor">
 
-<img src="assets/SofIA.png" class="sofia">
+<img
+src="assets/SofIA.png"
+alt="SofIA"
+class="sofia">
 
 <div class="dialogo">
 
 <div class="nombre">
 
-SofIA
+👩 SofIA
 
 </div>
 
 <div class="texto">
 
-¡Bienvenido a <b>FinanCity</b>.
+¡Bienvenido a <b>FinanCity</b>!
+
+<br><br>
 
 Aquí descubrirás que cualquier persona puede aprender a administrar dinero, crear negocios y construir riqueza.
 
-Comenzaremos con <b>500 SOF</b>.
+<br><br>
+
+Comenzaremos con <b>500 SOF</b>, la moneda oficial de FinanCity.
+
+<br><br>
 
 Mi misión será ayudarte a convertir una pequeña idea en una gran ciudad.
 
-¿Estás listo?
+<br><br>
+
+¿Estás listo para comenzar?
 
 </div>
 
-<button class="boton" onclick="location.href='juego.html'">
+<button
+class="boton"
+onclick="window.location.href='juego.html'">
 
-Comenzar
+COMENZAR
 
 </button>
 
@@ -153,4 +64,5 @@ Comenzar
 </div>
 
 </body>
-  </html>
+
+</html>
