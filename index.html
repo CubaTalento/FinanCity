@@ -5,11 +5,13 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>FinanCity</title>
 
-<link rel="stylesheet" href="frontend/css/menu.css">
+<link rel="stylesheet"
+href="frontend/css/menu.css">
 
 </head>
 
@@ -17,65 +19,91 @@
 
 <section id="inicio">
 
-<div class="contenido">
+<div class="fondo"></div>
+
+<div class="oscuro"></div>
+
+<header class="encabezado">
+
+<button class="icono" id="sonido">
+
+🔊
+
+</button>
 
 <img
 src="assets/Logo.png"
 alt="FinanCity"
 class="logo">
 
-<h2 class="subtitulo">
+<button class="icono" id="idioma">
 
-Construye tu imperio financiero
+🌎
 
-</h2>
+</button>
+
+</header>
+
+<main class="principal">
+
+<div class="ladoIzquierdo">
 
 <img
 src="assets/SofIA.png"
 alt="SofIA"
 class="sofia">
 
+</div>
+
+<div class="ladoDerecho">
+
 <div class="dialogo">
 
-<strong>👩 SofIA</strong>
+<h2>
+
+👩 SofIA
+
+</h2>
+
+<p>
+
+Bienvenido a <strong>FinanCity</strong>.
 
 <br><br>
 
-Bienvenido a <b>FinanCity</b>.
+Construye empresas.
+
+Administra tus finanzas.
+
+Invierte.
+
+Haz crecer tu ciudad.
 
 <br><br>
 
-Aquí cada decisión cuenta.
+Hoy comienza tu historia.
 
-Construye negocios, administra tus finanzas,
-invierte con inteligencia y crea el mayor
-imperio empresarial de la ciudad.
-
-<br><br>
-
-¿Estás listo para comenzar?
+</p>
 
 </div>
 
 <button
 class="boton verde"
-onclick="window.location.href='intro.html'">
+onclick="location.href='intro.html'">
 
 ▶ NUEVA PARTIDA
 
 </button>
 
 <button
-class="boton azul"
-onclick="alert('Próximamente podrás continuar una partida guardada');">
+class="boton azul">
 
 📂 CONTINUAR
 
 </button>
 
 <button
-class="boton morado"
-onclick="alert('Ajustes disponibles próximamente');">
+class="boton morado">
 
 ⚙ AJUSTES
 
@@ -83,9 +111,49 @@ onclick="alert('Ajustes disponibles próximamente');">
 
 </div>
 
-<footer>
+</main>
 
-FinanCity v0.1 Alpha
+<footer class="barraInferior">
+
+<div>
+
+🏙️
+
+<span>Ciudad</span>
+
+</div>
+
+<div>
+
+💼
+
+<span>Negocios</span>
+
+</div>
+
+<div>
+
+📈
+
+<span>Finanzas</span>
+
+</div>
+
+<div>
+
+🎒
+
+<span>Inventario</span>
+
+</div>
+
+<div>
+
+⚙️
+
+<span>Ajustes</span>
+
+</div>
 
 </footer>
 
