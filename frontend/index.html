@@ -3,13 +3,18 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>FinanCity</title>
+    <meta name="theme-color"
+          content="#0a1733">
 
-<link rel="stylesheet" href="css/menu.css">
+    <title>FinanCity</title>
+
+    <link rel="stylesheet"
+          href="css/menu.css">
 
 </head>
 
@@ -17,80 +22,205 @@
 
 <section id="inicio">
 
-<div class="contenido">
+    <!-- =====================================
+         CABECERA
+    ====================================== -->
 
-<img
-src="assets/Logo.png"
-alt="FinanCity"
-class="logo">
+    <header class="header">
 
-<h2 class="subtitulo">
+        <!-- Botón Sonido -->
 
-Construye tu imperio financiero
+        <button
+            class="top-btn sonido"
+            aria-label="Sonido">
 
-</h2>
+            🔊
 
-<img
-src="assets/SofIA.png"
-alt="SofIA"
-class="sofia">
+            <span>
+                SONIDO
+            </span>
 
-<div class="dialogo">
+        </button>
 
-<strong>👩 SofIA</strong>
+        <!-- Logo -->
 
-<br><br>
+        <div class="logo-contenedor">
 
-Bienvenido a <b>FinanCity</b>.
+            <img
+                src="assets/Logo.png"
+                alt="FinanCity"
+                class="logo">
 
-<br><br>
+        </div>
 
-Aquí cada decisión cuenta.
+        <!-- Botón Idioma -->
 
-Construye negocios, administra tus finanzas,
-invierte con inteligencia y crea el mayor
-imperio empresarial de la ciudad.
+        <button
+            class="top-btn idioma"
+            aria-label="Idioma">
 
-<br><br>
+            🌐
 
-¿Estás listo para comenzar?
+            <span>
+                IDIOMA
+            </span>
 
-</div>
+        </button>
 
-<button
-class="boton verde"
-onclick="window.location.href='intro.html'">
+    </header>
+        <!-- =====================================
+         ESCENARIO PRINCIPAL
+    ====================================== -->
 
-▶ NUEVA PARTIDA
+    <main class="escenario">
 
-</button>
+        <!-- SofIA -->
 
-<button
-class="boton azul"
-onclick="alert('Próximamente podrás continuar una partida guardada');">
+        <div class="sofia-panel">
 
-📂 CONTINUAR
+            <img
+                src="assets/SofIA.png"
+                alt="SofIA"
+                class="sofia">
 
-</button>
+        </div>
 
-<button
-class="boton morado"
-onclick="alert('Ajustes disponibles próximamente');">
+        <!-- Zona derecha -->
 
-⚙ AJUSTES
+        <div class="menu-panel">
 
-</button>
+            <!-- Globo -->
 
-</div>
+            <div class="dialogo">
 
-<footer>
+                <h2>
 
-FinanCity v0.1 Alpha
+                    👩 SofIA
 
-</footer>
+                </h2>
+
+                <p>
+
+                    Bienvenido a
+                    <strong>FinanCity</strong>.
+
+                </p>
+
+                <p>
+
+                    Construye empresas,
+                    administra tus recursos,
+                    toma decisiones inteligentes
+                    y conviértete en el mayor
+                    magnate financiero.
+
+                </p>
+
+                <p>
+
+                    ¿Estás listo para comenzar?
+
+                </p>
+
+            </div>
+
+            <!-- Menú -->
+
+            <nav class="menu-principal">
+
+                <button
+                    class="boton nueva"
+                    onclick="window.location.href='intro.html'">
+
+                    ▶ NUEVA PARTIDA
+
+                </button>
+
+                <button
+                    class="boton continuar"
+                    onclick="alert('Próximamente podrás continuar tu partida.')">
+
+                    📂 CONTINUAR
+
+                </button>
+
+                <button
+                    class="boton ajustes"
+                    onclick="alert('Los ajustes estarán disponibles próximamente.')">
+
+                    ⚙ AJUSTES
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </main>
+      <!-- =====================================
+         BARRA INFERIOR
+    ====================================== -->
+
+    <section class="barra-inferior">
+
+        <button class="barra-btn">
+            📘
+            <span>Aprende</span>
+        </button>
+
+        <button class="barra-btn">
+            💼
+            <span>Emprende</span>
+        </button>
+
+        <button class="barra-btn">
+            📈
+            <span>Invierte</span>
+        </button>
+
+        <button class="barra-btn">
+            🏆
+            <span>Compite</span>
+        </button>
+
+        <button class="barra-btn">
+            🚀
+            <span>Progresa</span>
+        </button>
+
+    </section>
+
+    <!-- =====================================
+         PIE
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="version">
+
+            FinanCity v0.1 Alpha
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 FinanCity. Todos los derechos reservados.
+
+        </div>
+
+        <button
+            class="privacidad"
+            onclick="alert('Política de privacidad próximamente');">
+
+            Privacidad
+
+        </button>
+
+    </footer>
 
 </section>
 
 </body>
 
 </html>
+    
