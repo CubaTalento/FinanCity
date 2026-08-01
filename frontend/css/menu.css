@@ -1,28 +1,634 @@
-/* FinanCity menu.css
-   Placeholder complete stylesheet generated.
-   Replace with future expanded version if needed.
-*/
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{width:100%;height:100%;font-family:Arial,sans-serif;background:#071528;color:#fff;overflow:hidden}
+/*==========================================
+  FINANCITY
+  MENU.CSS - PARTE 1
+==========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#07162f;
+
+}
+
 #inicio{
+
     position:relative;
+
     width:100vw;
     height:100vh;
-    background:url('../../assets/Fondo.png') center center/cover no-repeat;
+
+    background-image:url("../../assets/Fondo.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
 }
-#inicio::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(5,15,35,.15),rgba(5,15,35,.55))}
-.header{position:absolute;top:0;left:0;width:100%;padding:18px;display:flex;justify-content:space-between;align-items:center;z-index:10}
-.logo{width:min(320px,80vw);display:block;margin:auto}
-.top-btn{width:60px;height:60px;border-radius:16px;border:2px solid rgba(255,255,255,.2);background:rgba(15,30,60,.85);color:#fff}
-.escenario{position:relative;z-index:2;height:calc(100% - 150px);display:flex;align-items:flex-end;justify-content:space-between;padding:120px 20px 90px}
-.sofia-panel{width:42%;display:flex;align-items:flex-end}
-.sofia{max-width:100%;max-height:85vh;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,.4))}
-.menu-panel{width:54%;display:flex;flex-direction:column;gap:18px}
-.dialogo{background:rgba(9,28,60,.9);border:3px solid #37d66b;border-radius:22px;padding:18px;line-height:1.5}
-.boton{width:100%;padding:16px;border:none;border-radius:18px;color:#fff;font-weight:bold;font-size:18px}
-.nueva{background:#18b458}.continuar{background:#2b73ff}.ajustes{background:#7b45ff}
-.barra-inferior{position:absolute;left:0;right:0;bottom:64px;display:flex;gap:8px;padding:0 10px;z-index:5}
-.barra-btn{flex:1;height:60px;border:none;border-radius:14px;background:rgba(15,30,60,.88);color:#fff}
-.footer{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:space-between;padding:0 12px;font-size:11px;z-index:5}
-.privacidad{background:rgba(255,255,255,.12);border:none;color:#fff;padding:8px 12px;border-radius:10px}
-@media(max-width:768px){.logo{width:220px}.dialogo{font-size:14px}.boton{font-size:16px}}
+
+/* Oscurece ligeramente el fondo */
+
+#inicio::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(5,15,35,.20),
+        rgba(5,15,35,.45)
+    );
+
+    z-index:1;
+
+}
+
+/*==============================
+  CABECERA
+==============================*/
+
+.header{
+
+    position:absolute;
+
+    top:18px;
+    left:0;
+
+    width:100%;
+
+    padding:0 18px;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:flex-start;
+
+    z-index:20;
+
+}
+
+/*==============================
+  LOGO
+==============================*/
+
+.logo-contenedor{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.logo{
+
+    width:min(520px,70vw);
+
+    height:auto;
+
+    display:block;
+
+    filter:drop-shadow(0 8px 16px rgba(0,0,0,.45));
+
+}
+
+/*==============================
+  BOTONES SUPERIORES
+==============================*/
+
+.top-btn{
+
+    width:74px;
+    height:74px;
+
+    border-radius:18px;
+
+    border:2px solid rgba(255,215,120,.45);
+
+    background:rgba(10,25,60,.82);
+
+    color:#ffffff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:13px;
+    font-weight:bold;
+
+    backdrop-filter:blur(6px);
+
+    box-shadow:
+        0 0 15px rgba(0,0,0,.35);
+
+}
+
+.top-btn span{
+
+    margin-top:4px;
+
+    font-size:11px;
+
+}
+
+/*==============================
+  MÓVILES
+==============================*/
+
+@media(max-width:768px){
+
+    .header{
+
+        top:12px;
+
+        padding:0 10px;
+
+    }
+
+    .top-btn{
+
+        width:62px;
+        height:62px;
+
+        font-size:11px;
+
+    }
+
+    .top-btn span{
+
+        font-size:9px;
+
+    }
+
+    .logo{
+
+        width:78vw;
+
+    }
+
+}
+/*==========================================
+  MENU.CSS - PARTE 2
+  SOFIA + ESCENARIO + DIÁLOGO
+==========================================*/
+
+.escenario{
+
+    position:relative;
+
+    z-index:10;
+
+    width:100%;
+    height:calc(100vh - 110px);
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:flex-end;
+
+    padding:120px 45px 40px;
+
+}
+
+/*==============================
+  SOFIA
+==============================*/
+
+.sofia-panel{
+
+    width:42%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:flex-end;
+    justify-content:flex-start;
+
+}
+
+.sofia{
+
+    width:100%;
+
+    max-width:430px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    animation:flotar 4s ease-in-out infinite;
+
+    filter:
+        drop-shadow(0 15px 25px rgba(0,0,0,.45));
+
+}
+
+/*==============================
+  PANEL DERECHO
+==============================*/
+
+.menu-panel{
+
+    width:48%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+/*==============================
+  DIÁLOGO
+==============================*/
+
+.dialogo{
+
+    width:100%;
+
+    max-width:470px;
+
+    background:rgba(10,28,65,.92);
+
+    border:3px solid #27d66d;
+
+    border-radius:22px;
+
+    padding:22px;
+
+    color:#ffffff;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.35);
+
+    margin-bottom:22px;
+
+}
+
+.dialogo h2{
+
+    font-size:28px;
+
+    margin-bottom:12px;
+
+    color:#6ef0ff;
+
+}
+
+.dialogo p{
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    margin-bottom:12px;
+
+}
+
+/*==============================
+  ANIMACIÓN
+==============================*/
+
+@keyframes flotar{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==============================
+  RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+    .escenario{
+
+        flex-direction:column;
+
+        justify-content:flex-start;
+
+        align-items:center;
+
+        padding:105px 20px 20px;
+
+    }
+
+    .sofia-panel{
+
+        width:78%;
+
+        height:auto;
+
+        justify-content:center;
+
+        margin-bottom:15px;
+
+    }
+
+    .sofia{
+
+        max-width:260px;
+
+    }
+
+    .menu-panel{
+
+        width:100%;
+
+    }
+
+    .dialogo{
+
+        max-width:100%;
+
+        padding:18px;
+
+    }
+
+    .dialogo h2{
+
+        font-size:22px;
+
+    }
+
+    .dialogo p{
+
+        font-size:16px;
+
+    }
+
+}
+/*==========================================
+  MENU.CSS - PARTE 3
+  BOTONES + BARRA + PIE
+==========================================*/
+
+/*==============================
+  BOTONES PRINCIPALES
+==============================*/
+
+.menu-principal{
+
+    width:100%;
+
+    max-width:470px;
+
+}
+
+.boton{
+
+    width:100%;
+
+    height:72px;
+
+    margin-bottom:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+        0 10px 20px rgba(0,0,0,.35);
+
+}
+
+.boton:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.boton:active{
+
+    transform:scale(.98);
+
+}
+
+.nueva{
+
+    background:linear-gradient(
+        180deg,
+        #2fdc74,
+        #14994d
+    );
+
+}
+
+.continuar{
+
+    background:linear-gradient(
+        180deg,
+        #49a5ff,
+        #1f5fd4
+    );
+
+}
+
+.ajustes{
+
+    background:linear-gradient(
+        180deg,
+        #9d6bff,
+        #6532d9
+    );
+
+}
+
+/*==============================
+  BARRA INFERIOR
+==============================*/
+
+.barra-inferior{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:70px;
+
+    width:100%;
+
+    padding:0 14px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    z-index:30;
+
+}
+
+.barra-btn{
+
+    flex:1;
+
+    height:62px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:rgba(10,25,60,.90);
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:1px solid rgba(255,255,255,.10);
+
+}
+
+.barra-btn span{
+
+    margin-top:4px;
+
+}
+
+/*==============================
+  PIE
+==============================*/
+
+.footer{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:10px;
+
+    width:100%;
+
+    padding:0 15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:11px;
+
+    z-index:40;
+
+}
+
+.privacidad{
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:12px;
+
+    background:#1b4ed8;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+/*==============================
+  RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+    .boton{
+
+        height:62px;
+
+        font-size:18px;
+
+    }
+
+    .barra-inferior{
+
+        bottom:60px;
+
+        gap:6px;
+
+    }
+
+    .barra-btn{
+
+        height:54px;
+
+        font-size:10px;
+
+    }
+
+    .footer{
+
+        flex-direction:column;
+
+        gap:6px;
+
+        font-size:10px;
+
+        bottom:8px;
+
+    }
+
+}
