@@ -3,240 +3,224 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<title>FinanCity</title>
+    <meta name="theme-color"
+          content="#0a1733">
 
-<meta name="theme-color" content="#0b1433">
+    <title>FinanCity</title>
 
-<link rel="icon" href="assets/Icono.png">
-
-<link rel="stylesheet" href="frontend/css/menu.css">
+    <link rel="stylesheet"
+          href="css/menu.css">
 
 </head>
 
 <body>
 
-<div id="menuPrincipal">
+<section id="inicio">
 
-    <!-- Fondo -->
+    <!-- =====================================
+         CABECERA
+    ====================================== -->
 
-    <div class="fondo"></div>
+    <header class="header">
 
-    <div class="overlay"></div>
-
-    <!-- Barra superior -->
-
-    <header class="topbar">
+        <!-- Botón Sonido -->
 
         <button
-        id="btnSonido"
-        class="botonIcono"
-        aria-label="Sonido">
+            class="top-btn sonido"
+            aria-label="Sonido">
 
             🔊
 
-            <span>SONIDO</span>
+            <span>
+                SONIDO
+            </span>
 
         </button>
 
-        <img
-        src="assets/Logo.png"
-        alt="FinanCity"
-        class="logo">
+        <!-- Logo -->
+
+        <div class="logo-contenedor">
+
+            <img
+                src="assets/Logo.png"
+                alt="FinanCity"
+                class="logo">
+
+        </div>
+
+        <!-- Botón Idioma -->
 
         <button
-        id="btnIdioma"
-        class="botonIcono"
-        aria-label="Idioma">
+            class="top-btn idioma"
+            aria-label="Idioma">
 
-            🌍
+            🌐
 
-            <span>IDIOMA</span>
+            <span>
+                IDIOMA
+            </span>
 
         </button>
 
     </header>
+        <!-- =====================================
+         ESCENARIO PRINCIPAL
+    ====================================== -->
 
-    <!-- Centro -->
-
-    <main class="contenido">
+    <main class="escenario">
 
         <!-- SofIA -->
 
-        <section class="zonaSofia">
+        <div class="sofia-panel">
 
             <img
-            src="assets/SofIA.png"
-            alt="SofIA"
-            class="sofia">
+                src="assets/SofIA.png"
+                alt="SofIA"
+                class="sofia">
 
-        </section>
+        </div>
 
-        <!-- Globo -->
+        <!-- Zona derecha -->
 
-        <section class="zonaDialogo">
+        <div class="menu-panel">
+
+            <!-- Globo -->
 
             <div class="dialogo">
 
                 <h2>
 
-                    ¡Hola, futuro magnate!
+                    👩 SofIA
 
                 </h2>
 
                 <p>
 
-                    Cada decisión que tomes hoy
-                    construirá la ciudad de tus sueños.
+                    Bienvenido a
+                    <strong>FinanCity</strong>.
 
                 </p>
 
-                <p class="pregunta">
+                <p>
 
-                    ¿Estás listo para empezar?
+                    Construye empresas,
+                    administra tus recursos,
+                    toma decisiones inteligentes
+                    y conviértete en el mayor
+                    magnate financiero.
+
+                </p>
+
+                <p>
+
+                    ¿Estás listo para comenzar?
 
                 </p>
 
             </div>
 
-        </section>
+            <!-- Menú -->
 
-        <!-- Botones -->
+            <nav class="menu-principal">
 
-        <section class="menuBotones">
+                <button
+                    class="boton nueva"
+                    onclick="window.location.href='intro.html'">
 
-            <button
-            class="botonMenu verde"
-            onclick="location.href='intro.html'">
+                    ▶ NUEVA PARTIDA
 
-                <span class="iconoBoton">▶</span>
+                </button>
 
-                <span>
+                <button
+                    class="boton continuar"
+                    onclick="alert('Próximamente podrás continuar tu partida.')">
 
-                    <strong>NUEVA PARTIDA</strong>
+                    📂 CONTINUAR
 
-                    <small>
-                    Comienza tu aventura desde cero
-                    </small>
+                </button>
 
-                </span>
+                <button
+                    class="boton ajustes"
+                    onclick="alert('Los ajustes estarán disponibles próximamente.')">
 
-            </button>
+                    ⚙ AJUSTES
 
-            <button
-            class="botonMenu azul">
+                </button>
 
-                <span class="iconoBoton">📂</span>
+            </nav>
 
-                <span>
-
-                    <strong>CONTINUAR</strong>
-
-                    <small>
-                    Retoma tu ciudad
-                    </small>
-
-                </span>
-
-            </button>
-
-            <button
-            class="botonMenu morado">
-
-                <span class="iconoBoton">⚙</span>
-
-                <span>
-
-                    <strong>AJUSTES</strong>
-
-                    <small>
-                    Personaliza tu experiencia
-                    </small>
-
-                </span>
-
-            </button>
-
-        </section>
+        </div>
 
     </main>
+      <!-- =====================================
+         BARRA INFERIOR
+    ====================================== -->
 
-    <!-- Barra inferior -->
+    <section class="barra-inferior">
 
-    <footer class="barraInferior">
+        <button class="barra-btn">
+            📘
+            <span>Aprende</span>
+        </button>
 
-        <div class="itemBarra">
-
-            📈
-
-            <span>APRENDE</span>
-
-        </div>
-
-        <div class="itemBarra">
-
+        <button class="barra-btn">
             💼
+            <span>Emprende</span>
+        </button>
 
-            <span>EMPRENDE</span>
+        <button class="barra-btn">
+            📈
+            <span>Invierte</span>
+        </button>
 
-        </div>
-
-        <div class="itemBarra">
-
-            📊
-
-            <span>INVIERTE</span>
-
-        </div>
-
-        <div class="itemBarra">
-
-            👥
-
-            <span>COMPITE</span>
-
-        </div>
-
-        <div class="itemBarra">
-
+        <button class="barra-btn">
             🏆
+            <span>Compite</span>
+        </button>
 
-            <span>PROGRESA</span>
+        <button class="barra-btn">
+            🚀
+            <span>Progresa</span>
+        </button>
+
+    </section>
+
+    <!-- =====================================
+         PIE
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="version">
+
+            FinanCity v0.1 Alpha
 
         </div>
 
-    </footer>
+        <div class="copyright">
 
-    <!-- Pie -->
+            © 2026 FinanCity. Todos los derechos reservados.
 
-    <div class="creditos">
+        </div>
 
-        <span>
+        <button
+            class="privacidad"
+            onclick="alert('Política de privacidad próximamente');">
 
-            Versión 0.2.0
-
-        </span>
-
-        <span>
-
-            © 2026 FinanCity
-
-        </span>
-
-        <button id="privacidad">
-
-            PRIVACIDAD
+            Privacidad
 
         </button>
 
-    </div>
+    </footer>
 
-</div>
+</section>
 
 </body>
 
-  </html>
+</html>
+    
