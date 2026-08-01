@@ -1,364 +1,790 @@
-/* ===================================================
+/* =====================================================
    FINANCITY
-   MENÚ PRINCIPAL - VERSIÓN AAA 1.0
-=================================================== */
+   MENU PRINCIPAL
+   VERSION 2.0
+===================================================== */
+
+/* ==========================================
+   RESET
+========================================== */
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html,
 body{
 
-width:100%;
-height:100%;
-overflow:hidden;
+    width:100%;
+    height:100%;
 
-font-family:Arial,Helvetica,sans-serif;
+    overflow:hidden;
 
-background:#000;
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:#071528;
+
+    color:#ffffff;
 
 }
+
+/* ==========================================
+   ESCENARIO
+========================================== */
 
 #inicio{
 
-position:relative;
+    position:relative;
 
-width:100vw;
-height:100vh;
+    width:100vw;
+    height:100vh;
 
-overflow:hidden;
+    overflow:hidden;
 
-display:flex;
-flex-direction:column;
+    background-image:url("../assets/Fondo.png");
 
-}
+    background-position:center;
 
-/* ==========================
-   FONDO
-========================== */
+    background-size:cover;
 
-.fondo{
-
-position:absolute;
-
-left:0;
-top:0;
-
-width:100%;
-height:100%;
-
-background-image:url("../../assets/Fondo.png");
-background-size:cover;
-background-position:center;
-
-transform:scale(1.05);
-
-z-index:1;
+    background-repeat:no-repeat;
 
 }
 
-.oscuro{
+/* Oscurece ligeramente */
 
-position:absolute;
+#inicio::before{
 
-inset:0;
+    content:"";
 
-background:linear-gradient(
-rgba(0,0,0,.18),
-rgba(0,0,0,.55)
-);
+    position:absolute;
 
-z-index:2;
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        rgba(5,15,35,.10),
+
+        rgba(5,15,35,.35),
+
+        rgba(5,15,35,.55)
+
+    );
+
+    z-index:1;
 
 }
 
-/* ==========================
-   ENCABEZADO
-========================== */
+/* ==========================================
+   HEADER
+========================================== */
 
-.encabezado{
+.header{
 
-position:relative;
+    position:absolute;
 
-z-index:10;
+    top:0;
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+    left:0;
 
-padding:18px;
+    width:100%;
+
+    padding:
+
+        18px
+        18px
+        0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    z-index:100;
+
+}
+
+/* ==========================================
+   BOTONES SUPERIORES
+========================================== */
+
+.top-btn{
+
+    width:62px;
+
+    height:62px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    background:
+
+        rgba(18,35,70,.90);
+
+    border:
+
+        2px solid
+        rgba(255,255,255,.18);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:2px;
+
+    transition:.25s;
+
+    backdrop-filter:blur(6px);
+
+}
+
+.top-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+.top-btn:active{
+
+    transform:scale(.95);
+
+}
+
+.top-btn span{
+
+    font-size:9px;
+
+    font-weight:bold;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo-contenedor{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
 }
 
 .logo{
 
-width:240px;
+    width:310px;
 
-filter:drop-shadow(0 0 18px rgba(255,255,255,.25));
+    max-width:85%;
 
-}
+    filter:
 
-.icono{
+        drop-shadow(0 10px 20px rgba(0,0,0,.50));
 
-width:52px;
-height:52px;
+    animation:
 
-border:none;
-
-border-radius:50%;
-
-background:rgba(255,255,255,.18);
-
-backdrop-filter:blur(10px);
-
-font-size:22px;
-
-color:white;
+        logoFloat 5s ease-in-out infinite;
 
 }
 
-/* ==========================
-   CUERPO
-========================== */
+/* ==========================================
+   ANIMACIÓN LOGO
+========================================== */
 
-.principal{
+@keyframes logoFloat{
 
-position:relative;
+    0%{
 
-z-index:10;
+        transform:translateY(0px);
 
-flex:1;
+    }
 
-display:flex;
-align-items:center;
-justify-content:space-evenly;
+    50%{
 
-padding:15px;
+        transform:translateY(-5px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+/* ==========================================
+   ESCENARIO PRINCIPAL
+========================================== */
+
+.escenario{
+
+    position:relative;
+
+    z-index:20;
+
+    width:100%;
+    height:calc(100vh - 185px);
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:space-between;
+
+    padding:
+
+        135px
+        25px
+        20px
+        25px;
 
 }
 
-.ladoIzquierdo{
-
-width:45%;
-
-display:flex;
-justify-content:center;
-
-}
-
-.ladoDerecho{
-
-width:50%;
-
-}
-
-/* ==========================
+/* ==========================================
    SOFIA
-========================== */
+========================================== */
+
+.sofia-panel{
+
+    width:42%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:flex-start;
+
+}
 
 .sofia{
 
-width:100%;
-max-width:280px;
+    width:100%;
 
-animation:flotar 4s ease-in-out infinite;
+    max-width:340px;
 
-filter:drop-shadow(0 10px 25px rgba(0,0,0,.55));
+    max-height:95%;
+
+    object-fit:contain;
+
+    object-position:bottom;
+
+    user-select:none;
+
+    pointer-events:none;
+
+    filter:
+
+        drop-shadow(
+            0 10px 22px
+            rgba(0,0,0,.45)
+        );
+
+    animation:
+
+        sofiaFloat
+        4.5s
+        ease-in-out
+        infinite;
 
 }
 
-/* ==========================
+@keyframes sofiaFloat{
+
+    0%{
+
+        transform:
+        translateY(0px);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:
+        translateY(0px);
+
+    }
+
+}
+
+/* ==========================================
+   PANEL DERECHO
+========================================== */
+
+.menu-panel{
+
+    width:54%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+}
+
+/* ==========================================
    DIALOGO
-========================== */
+========================================== */
 
 .dialogo{
 
-background:white;
+    position:relative;
 
-border-radius:22px;
+    width:100%;
 
-padding:20px;
+    padding:
 
-margin-bottom:18px;
+        18px
+        20px;
 
-box-shadow:0 15px 40px rgba(0,0,0,.40);
+    margin-bottom:22px;
+
+    background:
+
+        rgba(9,28,60,.88);
+
+    border:
+
+        3px solid
+        #3fdc72;
+
+    border-radius:22px;
+
+    color:white;
+
+    box-shadow:
+
+        0 12px 24px
+        rgba(0,0,0,.35);
+
+    backdrop-filter:
+
+        blur(8px);
+
+}
+
+.dialogo::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-18px;
+
+    bottom:28px;
+
+    width:0;
+    height:0;
+
+    border-top:12px solid transparent;
+
+    border-bottom:12px solid transparent;
+
+    border-right:18px solid #3fdc72;
+
+}
+
+.dialogo::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-14px;
+
+    bottom:30px;
+
+    width:0;
+    height:0;
+
+    border-top:10px solid transparent;
+
+    border-bottom:10px solid transparent;
+
+    border-right:16px solid rgba(9,28,60,.95);
 
 }
 
 .dialogo h2{
 
-color:#0b4ca4;
+    font-size:24px;
 
-margin-bottom:10px;
+    color:#ffffff;
+
+    margin-bottom:12px;
 
 }
 
 .dialogo p{
 
-font-size:16px;
+    font-size:16px;
 
-line-height:1.6;
+    line-height:1.55;
 
-color:#333;
+    margin-bottom:12px;
 
 }
 
-/* ==========================
-   BOTONES
-========================== */
+.dialogo p:last-child{
+
+    margin-bottom:0;
+
+    font-weight:bold;
+
+    color:#7dff8d;
+
+}
+
+/* ==========================================
+   MENU PRINCIPAL
+========================================== */
+
+.menu-principal{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+/* ==========================================
+   BOTONES PRINCIPALES
+========================================== */
 
 .boton{
 
-width:100%;
+    width:100%;
 
-padding:18px;
+    padding:18px;
 
-border:none;
+    border:none;
 
-border-radius:16px;
+    border-radius:18px;
 
-font-size:18px;
+    cursor:pointer;
 
-font-weight:bold;
+    font-size:20px;
 
-color:white;
+    font-weight:bold;
 
-margin-bottom:14px;
+    letter-spacing:.5px;
 
-}
+    color:#ffffff;
 
-.verde{
+    transition:
+        transform .20s,
+        box-shadow .20s;
 
-background:#1db954;
+    box-shadow:
 
-}
-
-.azul{
-
-background:#2d73ff;
-
-}
-
-.morado{
-
-background:#7d47ff;
+        0 8px 18px
+        rgba(0,0,0,.35);
 
 }
 
-/* ==========================
+.boton:hover{
+
+    transform:
+        translateY(-2px);
+
+}
+
+.boton:active{
+
+    transform:
+        scale(.96);
+
+}
+
+.nueva{
+
+    background:
+
+        linear-gradient(
+            #39d46d,
+            #149d45
+        );
+
+}
+
+.continuar{
+
+    background:
+
+        linear-gradient(
+            #3b8dff,
+            #1d56d9
+        );
+
+}
+
+.ajustes{
+
+    background:
+
+        linear-gradient(
+            #9a5dff,
+            #6f2fff
+        );
+
+}
+
+/* ==========================================
    BARRA INFERIOR
-========================== */
+========================================== */
 
-.barraInferior{
+.barra-inferior{
 
-position:relative;
+    position:absolute;
 
-z-index:10;
+    left:0;
 
-height:75px;
+    bottom:72px;
 
-background:rgba(5,18,45,.92);
+    width:100%;
 
-display:flex;
-justify-content:space-around;
-align-items:center;
+    padding:0 12px;
 
-backdrop-filter:blur(10px);
+    display:flex;
 
-color:white;
+    justify-content:space-between;
 
-}
+    align-items:center;
 
-.barraInferior div{
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-font-size:24px;
+    z-index:60;
 
 }
 
-.barraInferior span{
+.barra-btn{
 
-font-size:11px;
+    flex:1;
 
-margin-top:3px;
+    margin:0 4px;
 
-}
+    height:64px;
 
-/* ==========================
-   ANIMACIONES
-========================== */
+    border:none;
 
-@keyframes flotar{
+    border-radius:16px;
 
-0%{
+    background:
 
-transform:translateY(0px);
+        rgba(10,24,55,.92);
 
-}
+    border:
 
-50%{
+        2px solid
+        rgba(255,255,255,.12);
 
-transform:translateY(-12px);
+    color:white;
 
-}
+    display:flex;
 
-100%{
+    flex-direction:column;
 
-transform:translateY(0px);
+    justify-content:center;
 
-}
+    align-items:center;
 
-}
+    gap:3px;
 
-/* ==========================
-   MÓVILES
-========================== */
+    font-size:20px;
 
-@media(max-width:700px){
-
-.principal{
-
-flex-direction:column;
-
-justify-content:center;
+    transition:.25s;
 
 }
 
-.ladoIzquierdo,
-.ladoDerecho{
+.barra-btn span{
 
-width:100%;
+    font-size:11px;
 
-}
-
-.logo{
-
-width:200px;
-
-margin:auto;
+    font-weight:bold;
 
 }
 
-.sofia{
+.barra-btn:hover{
 
-max-width:220px;
+    transform:
 
-margin-bottom:15px;
-
-}
-
-.dialogo{
-
-font-size:15px;
+        translateY(-3px);
 
 }
 
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:8px;
+
+    width:100%;
+
+    padding:0 14px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:11px;
+
+    z-index:80;
+
 }
+
+.version{
+
+    font-weight:bold;
+
+}
+
+.copyright{
+
+    opacity:.85;
+
+    text-align:center;
+
+    flex:1;
+
+}
+
+.privacidad{
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:12px;
+
+    background:
+
+        rgba(255,255,255,.12);
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+   RESPONSIVE MOVILES
+========================================== */
+
+@media (max-width:768px){
+
+    .logo{
+
+        width:240px;
+
+    }
+
+    .escenario{
+
+        padding:
+            120px
+            16px
+            18px;
+
+    }
+
+    .sofia-panel{
+
+        width:42%;
+
+    }
+
+    .menu-panel{
+
+        width:55%;
+
+    }
+
+    .dialogo{
+
+        padding:16px;
+
+    }
+
+    .dialogo h2{
+
+        font-size:20px;
+
+    }
+
+    .dialogo p{
+
+        font-size:14px;
+
+    }
+
+    .boton{
+
+        font-size:18px;
+
+        padding:16px;
+
+    }
+
+    .barra-btn{
+
+        height:58px;
+
+        font-size:18px;
+
+    }
+
+    .barra-btn span{
+
+        font-size:10px;
+
+    }
+
+}
+
+/* ==========================================
+   FIN MENU.CSS
+========================================== */
